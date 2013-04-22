@@ -41,7 +41,7 @@ module VagrantPlugins
           @validation_client_name = "chef-validator" if @validation_client_name == UNSET_VALUE
           @validation_key_path = nil if @validation_key_path == UNSET_VALUE
 
-          if @encrypted_data_bag_secret == UNSET_VALUE
+          if @encrypted_data_bag_secret == nil
             @encrypted_data_bag_secret = "/tmp/encrypted_data_bag_secret"
           end
         end
